@@ -38,5 +38,16 @@ router.delete('/:id' , (req , res)=>{
     })
 });
 
+// DELETE
+router.delete('/' , (req , res)=>{
+    tasksModel.deleteMany({}).then((item) => {
+        if (!item) {
+            return res.status(404).send();
+        }
+        res.send(item);
+    }).catch((error) => {
+        res.status(500).send(error);
+    })
+});
 
 module.exports = router;

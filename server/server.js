@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose= require("mongoose");
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ const app= express()
 
 // MIDDLEWARES
 app.use(bodyParser.json());
+app.use(cors());
 
 
 const db = process.env.DB_URI;

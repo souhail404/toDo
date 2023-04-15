@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+
+  font-family: 'poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#super-container{
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 36px 18px;
+}
+.h-txt{
+  text-transform: capitalize;
+}
+.section{
+  width: 100%;
+  height: 100%;
+}
+.sec--container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 36px;
+}
+.sec--header{
+  width: 100%;
+}
+.sec--h-txt{
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* tasks components */
+.tasks-wrapper{
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+.task-wrapper:not(:last-child){
+  margin-bottom: 12px;
+}
+.task-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid black;
+}
+.task-wrapper .data:not(:last-child){
+  margin-bottom: 6px;
+}
+.task--h-txt{
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+
+/* add task form */
+.add-task--form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.add-task--form .row:not(:last-child){
+  margin-bottom: 24px;
+}
+.add-task--form .row{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.add-task--form .row label{
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.add-task--form .row .input{
+  width: 100%;
+}
+.add-task--form .row input.input{
+  height: 40px;
+  font-size: 16px;
+  padding-inline: 6px;
+}
+.add-task--form .row textarea.input{
+  font-size: 16px;
+  padding-inline: 6px;
+  padding-top: 3px;
+  resize: none;
+}
+.add-task--form .row a.input{
+  height: 40px;
+  color: black;
+  border: 1px solid gray;
+  background-color: antiquewhite;
+  margin-top: 12px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-task--form .row a.input:hover{
+  filter: brightness(0.98);
 }
